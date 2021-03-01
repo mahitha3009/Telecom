@@ -1,0 +1,24 @@
+
+<div>
+<mat-menu #menu="matMenu">
+  <!--<button class="item" mat-menu-item>Switch</button> -->
+  <button class="item" [routerLink]="['/prepaid/plans']"  mat-menu-item>Plans</button>
+  <button class="item" [routerLink]="['/prepaid/recharge']" mat-menu-item>Recharge </button>
+</mat-menu>
+<button class="bc" mat-button [matMenuTriggerFor]="menu">Prepaid</button>
+ 
+<mat-menu #menu1="matMenu">
+  <button class="item" [routerLink]="['/postpaid/paybill']" mat-menu-item>Pay Bill </button>
+  <button class="item" [routerLink]="['/postpaid/postpaidplans']" mat-menu-item>Plans</button>
+</mat-menu>
+<button class="bc" mat-button [matMenuTriggerFor]="menu1">Postpaid</button>
+
+<mat-menu #menu2="matMenu">
+  <button class="item" [routerLink]="['newconnection/newprepaid']" mat-menu-item>New Prepaid SIM</button>
+  <button class="item" [routerLink]="['newconnection/newpostpaid']" mat-menu-item> New Postpaid SIM</button>
+</mat-menu>
+<button class="bc" mat-button [matMenuTriggerFor]="menu2">New Connection</button>
+</div>
+
+
+<router-outlet> </router-outlet>
